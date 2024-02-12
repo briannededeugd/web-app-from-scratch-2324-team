@@ -1,0 +1,42 @@
+{
+    "teamName": "The Number Ones",
+    "members": [
+        {
+            "name" : "brianne",
+            "personalPage" : "https://briannededeugd.github.io/web-app-from-scratch-2324/",
+            "personalData": "https://raw.githubusercontent.com/briannededeugd/web-app-from-scratch-2324/main/docs/data/data.json"
+        },
+        {
+            "name" : "elaine",
+            "personalPage" : "https://briannededeugd.github.io/web-app-from-scratch-2324/",
+            "personalData": "https://raw.githubusercontent.com/briannededeugd/web-app-from-scratch-2324/main/docs/data/data.json"
+        },
+        {
+            "name" : "rose",
+            "personalPage" : "https://briannededeugd.github.io/web-app-from-scratch-2324/",
+            "personalData": "https://raw.githubusercontent.com/briannededeugd/web-app-from-scratch-2324/main/docs/data/data.json"
+        },
+        {
+            "name" : "ruud",
+            "personalPage" : "https://briannededeugd.github.io/web-app-from-scratch-2324/",
+            "personalData": "https://raw.githubusercontent.com/briannededeugd/web-app-from-scratch-2324/main/docs/data/data.json"
+        }
+    ],
+    "tutorial": [
+        {
+            "name": "HOW TO LINK YOUR DATA",
+            "step one": "Go to your data file via Github",
+            "step two": "Click 'Raw' in the upper righthand corner",
+            "step three": "Copy the URL of the raw data and paste it at personalData",
+            "step four": "Paste your live site link at personalPage"
+        }
+    ],
+    "pages" : [{
+        "home" : "Welkom",
+        "detail" : "Detail van"
+    }],
+    "otherstuff" : [{
+        "feel" : "free",
+        "to" : "expereriment"
+    }]
+}
