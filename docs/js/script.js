@@ -15,7 +15,7 @@ const memberData = {
  *=============================================**/
 
 // Fetching the members
-fetch("./data/team.json")
+fetch("/team.json")
 	.then((response) => response.json())
 	.then((teamdata) => {
 		members = teamdata.members;
@@ -26,7 +26,7 @@ fetch("./data/team.json")
 // Matching data to members
 function loadMemberData(members) {
 	members.forEach((member) => {
-		const dataURL = `${member.personalData}`;
+		const dataURL = `${member.personalPage}`;
 
 		fetch(dataURL)
 			.then((response) => {
