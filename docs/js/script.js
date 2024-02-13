@@ -15,7 +15,7 @@ const memberData = {
  *=============================================**/
 
 // Fetching the members
-fetch("/team.json")
+fetch("./team.json")
 	.then((response) => response.json())
 	.then((teamdata) => {
 		members = teamdata.members;
