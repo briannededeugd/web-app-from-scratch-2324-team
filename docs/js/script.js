@@ -100,6 +100,7 @@ roseButton.addEventListener("click", () => {
   updateMemberData(memberData.rose);
 });
 
+// add styles to the clicked button, and remove it from the others.
 for (const button of buttonEls) {
   button.addEventListener("click", function (e) {
     e.currentTarget.classList.toggle("animate");

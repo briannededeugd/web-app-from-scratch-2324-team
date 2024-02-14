@@ -213,6 +213,7 @@ button:hover {
 }
 
 /* button-press animation */
+/* used in javascript at a later time */
 @keyframes button-press {
   0% {
     transform: translateY(10px);
