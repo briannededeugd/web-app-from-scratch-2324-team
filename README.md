@@ -8,7 +8,6 @@ Welcome to the team app for the course Webapps From Scratch of the minor Web Des
  - [Concept and Team Roles](#conceptteamroles)
  - [Coding Standards](#codingstandards)
  - [Data Fetching and Handling](#datafetchinghandling)
- - [Version Log](#versionlog)
  - [Message from Collaborators](#messagefromcollabs)
 
  <a id="installationguide"></a>
@@ -133,50 +132,6 @@ function loadMemberData(members) {
 ```
 
 Now, the data was accessed, sorted and useable!
-
-  <a id="versionlog"></a>
-
- ## Version Log
-
- ### VERSION 0
-
- _Title: Initial setup and data_
-
- Includes:
- - `team.json` setup
- - Name fetching per member
- - Folder structure and file path fixes
-
-### VERSION 1
-
- _Title: External data fetching_
-
- Includes:
- - Fetching data from individual Github repo's
- - Initial HTML
- - HTML variables ready for use in Javascript
- - Dynamically loading in data
-
- 
-### VERSION 2
-
- _Title: Styling_
-
- Includes:
- - Global styles (CSS variables)
- - Computerscreen sizing
- - Phone sizing
- - Responsiveness
-
- ### VERSION 3
-
- _Title: Detailed styling_
-
- Includes:
- - Pseudoelement styling
- - Fonts
- - Microinteractions
- - States
 
   <a id="messagefromcollabs"></a>
 
