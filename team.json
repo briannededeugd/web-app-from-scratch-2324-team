@@ -8,18 +8,13 @@
         },
         {
             "name" : "elaine",
-            "personalSite" : "https://briannededeugd.github.io/web-app-from-scratch-2324/",
-            "personalPage": "https://raw.githubusercontent.com/briannededeugd/web-app-from-scratch-2324/main/data.json"
+            "personalSite" : "https://lainecedes-profile.onrender.com/",
+            "personalPage": "https://raw.githubusercontent.com/lainecedes/web-app-from-scratch-2324/main/public/data/data.json"
         },
         {
             "name" : "rose",
             "personalSite" : "https://rosemulazada.github.io/web-app-from-scratch-2324/",
             "personalPage": "https://raw.githubusercontent.com/rosemulazada/web-app-from-scratch-2324/main/info.json"
-        },
-        {
-            "name" : "ruud",
-            "personalSite" : "https://briannededeugd.github.io/web-app-from-scratch-2324/",
-            "personalPage": "https://raw.githubusercontent.com/briannededeugd/web-app-from-scratch-2324/main/data.json"
         }
     ],
     "tutorial": [
