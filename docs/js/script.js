@@ -4,9 +4,9 @@
 let members = [];
 
 const memberData = {
-	brianne: {},
-	elaine: {},
-	rose: {},
+  brianne: {},
+  elaine: {},
+  rose: {},
 };
 
 /**============================================
@@ -15,41 +15,41 @@ const memberData = {
 
 // Fetching the members
 fetch("./team.json")
-	.then((response) => response.json())
-	.then((teamdata) => {
-		members = teamdata.members;
-		loadMemberData(members);
-		console.log("TEAM MEMBERS:", members);
-	});
+  .then((response) => response.json())
+  .then((teamdata) => {
+    members = teamdata.members;
+    loadMemberData(members);
+    console.log("TEAM MEMBERS:", members);
+  });
 
 // Matching data to members
 function loadMemberData(members) {
-	members.forEach((member) => {
-		const dataURL = `${member.personalPage}`;
+  members.forEach((member) => {
+    const dataURL = `${member.personalPage}`;
 
-		fetch(dataURL)
-			.then((response) => {
-				if (!response.ok) {
-					throw new Error("Network response was not ok");
-				}
-				return response.json();
-			})
-			.then((data) => {
-				// Directly assign the fetched data to the correct variable based on the member's name
-				Object.assign(memberData[member.name], data);
-				console.log(`${member.name}`, data); // Logs the data per member
+    fetch(dataURL)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        // Directly assign the fetched data to the correct variable based on the member's name
+        Object.assign(memberData[member.name], data);
+        console.log(`${member.name}`, data); // Logs the data per member
 
-				// Set background image here after data is loaded
-				const buttons = [brianneButton, roseButton, elaineButton];
+        // Set background image here after data is loaded
+        const buttons = [brianneButton, roseButton, elaineButton];
 
-				buttons.forEach((button) => {
-					button.style.backgroundImage = `url("${
-						memberData[button.id].avatar_url
-					}")`;
-				});
-			})
-			.catch((error) => console.error("Error when loading the data:", error));
-	});
+        buttons.forEach((button) => {
+          button.style.backgroundImage = `url("${
+            memberData[button.id].avatar_url
+          }")`;
+        });
+      })
+      .catch((error) => console.error("Error when loading the data:", error));
+  });
 }
 
 /**============================================
@@ -77,25 +77,42 @@ const buttonEls = document.getElementsByTagName("button"); // @ Brianne from Ros
 // Changing the html based on the data. ALWAYS USE memberData.yourname.thepropertyneeded
 
 function updateMemberData(member) {
-	nameEl.textContent = member.name;
-	usernameEl.textContent = member.username;
-	levelEl.textContent = `LVL${member.age}`;
-	bioEl.textContent = member.bio;
-	iconEl.src = member.avatar_url;
-	favGameEl.textContent = member.favorite_game.join(", ");
-	console.log("button clicked!");
+  nameEl.textContent = member.name;
+  usernameEl.textContent = member.username;
+  levelEl.textContent = `LVL${member.age}`;
+  bioEl.textContent = member.bio;
+  iconEl.src = member.avatar_url;
+  favGameEl.textContent = member.favorite_game.join(", ");
+  console.log("button clicked!");
 }
 
 brianneButton.addEventListener("click", () => {
-	updateMemberData(memberData.brianne);
+  updateMemberData(memberData.brianne);
 });
 
 elaineButton.addEventListener("click", () => {
-	updateMemberData(memberData.elaine);
+  updateMemberData(memberData.elaine);
 });
 
 // ELAINE: favoriteGames moet zijn favorite_game
 
 roseButton.addEventListener("click", () => {
-	updateMemberData(memberData.rose);
+  updateMemberData(memberData.rose);
 });
+
+// add styles to the clicked button, and remove it from the others.
+for (const button of buttonEls) {
+  button.addEventListener("click", function (e) {
+    e.currentTarget.classList.toggle("animate");
+    e.currentTarget.style.padding = "2rem";
+    e.currentTarget.style.filter = "drop-shadow(0 0 .5rem pink)";
+
+    for (const otherButton of buttonEls) {
+      if (otherButton !== e.currentTarget) {
+        otherButton.classList.remove("animate");
+        otherButton.style.padding = "0";
+        otherButton.style.filter = "";
+      }
+    }
+  });
+}
