@@ -20,6 +20,7 @@
     --brown-pixel-border: #972d07;
     --darkbrown-pixel-border: #582707;
     --color-orange: #ffb20f;
+    --pixel-highlight: #fedf8a;
 }
 
 body {
@@ -70,7 +71,7 @@ button {
 
 
 .card-container {
-    margin: 0 3em 0 3em;
+    margin: 0 3em 0 2.5em;
     padding: 1em;
     border-radius: 1em;
 
@@ -91,7 +92,7 @@ button {
     border-radius: 2em;
     margin: 0 0 2em 0;
 
-    height: clamp(72.5cqh, 72.5cqh, 605px);
+    height: clamp(77cqh, 77cqh, 605px);
 
 }
 
@@ -118,6 +119,15 @@ button {
     padding-top: .25em;
 
     background-color: var(--color-orange);
+
+    /* pixel border effect */
+    box-shadow: -0.4em 0 0 0 var(--darkbrown-pixel-border),
+                0.4em 0 0 0 var(--darkbrown-pixel-border),
+                0 -0.4em 0 0 var(--darkbrown-pixel-border),
+                0 0.4em 0 0 var(--darkbrown-pixel-border),
+     
+                inset 0 -0.5em 0 0 var(--pixel-highlight),
+                inset 0.5em 0 0 0 var(--pixel-highlight);
 }
 
 .content-wrapper .level-container h3#level {
@@ -141,7 +151,7 @@ button {
     display: flex;
     flex-direction: column;
     border-radius: 0 0 2em 2em;
-    margin-top: 2em;
+    margin-top: 1em;
     text-align: left;
 }
 
