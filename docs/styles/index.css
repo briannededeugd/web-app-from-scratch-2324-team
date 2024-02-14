@@ -1,146 +1,155 @@
 /* fonts */
 
 @font-face {
-    font-family: 'VT323';
-    src: url("../fonts/VT323-Regular.ttf");
+  font-family: "VT323";
+  src: url("../fonts/VT323-Regular.ttf");
 }
 
 /* general */
-*, *::after, *::before {
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
-
 
 /* custom properties */
 
 :root {
-    --color-black: #111;
-    --color-white: #FFFFFF;
+  --color-black: #111;
+  --color-white: #ffffff;
 
-    --brown-pixel-border: #972d07;
-    --darkbrown-pixel-border: #582707;
-    --color-orange: #ffb20f;
-    --pixel-highlight: #fedf8a;
+  --brown-pixel-border: #972d07;
+  --darkbrown-pixel-border: #582707;
+  --color-orange: #ffb20f;
+  --pixel-highlight: #fedf8a;
 }
 
 body {
-    font-family: 'VT323', sans-serif;
-    background-image: url("../img/cozystreet.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
+  font-family: "VT323", sans-serif;
+  background-image: url("../img/cozystreet.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
 }
-
 
 /* code starts here: */
 
 h1 {
-    color: white;
+  color: white;
 }
 
-h2, h3 {
-    margin: 0;
+h2,
+h3 {
+  margin: 0;
 }
 
 h2#name {
-    font-size: 2.5em;
+  font-size: 2.5em;
 }
 
 h3#username {
-    font-size: 1.5em;
-    padding: 0;
+  font-size: 1.5em;
+  padding: 0;
 }
 
 h1 {
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-    text-align: center;
-    text-transform: uppercase;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 button {
-    height: 50px;
-    width: 50px;
-    background-color: none;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
+  height: 50px;
+  width: 50px;
+  background-color: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
 }
 
+button:hover {
+  transform: translateY(-15px);
+  filter: drop-shadow(2px 4px 6px rgba(26, 8, 75, 0.514));
+  width: 60px;
+  height: 60px;
+}
 
 .card-container {
-    margin: 0 3em 0 2.5em;
-    padding: 1em;
-    border-radius: 1em;
+  margin: 0 3em 0 2.5em;
+  padding: 1em;
+  border-radius: 1em;
 
-    position: absolute;
-    left: 50%;
-    transform: translateX(-57%);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-57%);
 }
 
 .content-wrapper {
-   /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.35);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5.1px);
-    -webkit-backdrop-filter: blur(5.1px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    padding: 1em 2em;
-    border-radius: 2em;
-    margin: 0 0 2em 0;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.1px);
+  -webkit-backdrop-filter: blur(5.1px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 1em 2em;
+  border-radius: 2em;
+  margin: 0 0 2em 0;
 
-    height: clamp(77cqh, 77cqh, 605px);
-
+  height: clamp(77cqh, 77cqh, 605px);
 }
 
 /* grid for metadata */
 .content-wrapper .metadata {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr;
-    padding: 1em;
-    border-radius: 2em 2em 0 0;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
+  padding: 1em;
+  border-radius: 2em 2em 0 0;
 }
 
 .content-displaynames h3 {
-    padding-top: 1em;
+  padding-top: 1em;
+}
+
+.level-container {
+  height: clamp(2rem, 4.5rem, 5rem);
 }
 
 /* grid for level */
 .content-wrapper .level-container {
-    display: grid;
-    grid-column: 4/4;
+  display: grid;
+  grid-column: 4/4;
 
-    height: 80px;
-    width: 90px;
-    padding-top: .25em;
+  width: 90px;
+  padding-top: 0.25em;
 
-    background-color: var(--color-orange);
+  background-color: var(--color-orange);
 
-    /* pixel border effect */
-    box-shadow: -0.4em 0 0 0 var(--darkbrown-pixel-border),
-                0.4em 0 0 0 var(--darkbrown-pixel-border),
-                0 -0.4em 0 0 var(--darkbrown-pixel-border),
-                0 0.4em 0 0 var(--darkbrown-pixel-border),
-     
-                inset 0 -0.5em 0 0 var(--pixel-highlight),
-                inset 0.5em 0 0 0 var(--pixel-highlight);
+  /* pixel border effect */
+  box-shadow: -0.4em 0 0 0 var(--darkbrown-pixel-border),
+    0.4em 0 0 0 var(--darkbrown-pixel-border),
+    0 -0.4em 0 0 var(--darkbrown-pixel-border),
+    0 0.4em 0 0 var(--darkbrown-pixel-border),
+    inset 0 -0.5em 0 0 var(--pixel-highlight),
+    inset 0.5em 0 0 0 var(--pixel-highlight);
 }
 
 .content-wrapper .level-container h3#level {
-    margin-top: 0.3em;
-    /* font-size: 2.5em; */
-    font-size: clamp(24px, 4vw, 40px);
-    text-align: center;
+  margin-top: 0.3em;
+  /* font-size: 2.5em; */
+  font-size: clamp(24px, 4vw, 40px);
+  text-align: center;
 }
 
 /* avatar box, height is custom so this will change */
 #icon-container {
-    height: 30cqh;
-    overflow: clip;
+  height: 30cqh;
+  overflow: clip;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -148,58 +157,77 @@ button {
 
 /* flex for about me information */
 #about-me-container {
-    display: flex;
-    flex-direction: column;
-    border-radius: 0 0 2em 2em;
-    margin-top: 1em;
-    text-align: left;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0 0 2em 2em;
+  margin-top: 1em;
+  text-align: left;
 }
 
 #about-me-container #favorite-game {
-    font-size: clamp(16px, 2.5vw, 22px);
-    margin: 0.5em 0 0.5em 1.25em;
+  font-size: clamp(16px, 2.5vw, 22px);
+  margin: 0.5em 0 0.5em 1.25em;
 }
 
 #about-me-container #favorite-game::before {
-    content: "";
-    height: 20px;
-    width: 20px;
-    position: absolute;
-    left: 3vw;
-    background-image: url("../img/pixelheart.png");
-    background-size: contain;
+  content: "";
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  left: 3vw;
+  background-image: url("../img/pixelheart.png");
+  background-size: contain;
 }
 
 #about-me-container #favorite-game p#bio {
-    margin: 1em 1em 0;
+  margin: 1em 1em 0;
 }
 
 #bio {
-    font-size: clamp(16px, 2.5vw, 22px);
+  font-size: clamp(16px, 2.5vw, 22px);
 }
 
 /* buttons with flex */
 #buttons-container {
-    display: flex;
-    justify-content: center;
-    gap: 2.5vw;
+  display: flex;
+  justify-content: center;
+  gap: 2.5vw;
 }
 
 #icon {
-    max-width: 250px;
-    height: auto;
+  max-width: 250px;
+  height: auto;
 }
 
-
 @media (max-width: 800px) {
-    .card-container {
-        min-width: 80vw;
-    }
+  .card-container {
+    min-width: 80vw;
+  }
 }
 
 @media (min-width: 800px) {
-    .card-container {
-        min-width: 680px;
-        max-width: 680px;
-    }
+  .card-container {
+    min-width: 680px;
+    max-width: 680px;
+  }
+}
+
+/* button-press animation */
+@keyframes button-press {
+  0% {
+    transform: translateY(10px);
+  }
+
+  80% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+/* animation class */
+.animate {
+  animation: button-press 0.5s ease forwards;
 }
