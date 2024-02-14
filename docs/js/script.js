@@ -7,7 +7,6 @@ const memberData = {
 	brianne: {},
 	elaine: {},
 	rose: {},
-	ruud: {},
 };
 
 /**============================================
@@ -41,7 +40,7 @@ function loadMemberData(members) {
 				console.log(`${member.name}`, data); // Logs the data per member
 
 				// Set background image here after data is loaded
-				const buttons = [brianneButton, roseButton, elaineButton, ruudButton];
+				const buttons = [brianneButton, roseButton, elaineButton];
 
 				buttons.forEach((button) => {
 					button.style.backgroundImage = `url("${
@@ -69,7 +68,6 @@ const bioEl = document.getElementById("bio");
 const brianneButton = document.getElementById("brianne");
 const elaineButton = document.getElementById("elaine");
 const roseButton = document.getElementById("rose");
-const ruudButton = document.getElementById("ruud");
 
 const buttonEls = document.getElementsByTagName("button"); // @ Brianne from Rose: Should return a HTML Collection, which I think may be most convenient to work with and loop over in this scenario..?
 
@@ -81,7 +79,7 @@ const buttonEls = document.getElementsByTagName("button"); // @ Brianne from Ros
 function updateMemberData(member) {
 	nameEl.textContent = member.name;
 	usernameEl.textContent = member.username;
-	levelEl.textContent = member.level;
+	levelEl.textContent = `LVL${member.age}`;
 	bioEl.textContent = member.bio;
 	iconEl.src = member.avatar_url;
 	favGameEl.textContent = member.favorite_game.join(", ");
@@ -96,10 +94,8 @@ elaineButton.addEventListener("click", () => {
 	updateMemberData(memberData.elaine);
 });
 
+// ELAINE: favoriteGames moet zijn favorite_game
+
 roseButton.addEventListener("click", () => {
 	updateMemberData(memberData.rose);
-});
-
-ruudButton.addEventListener("click", () => {
-	updateMemberData(memberData.ruud);
 });
