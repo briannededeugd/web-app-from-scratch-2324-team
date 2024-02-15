@@ -3,8 +3,8 @@
     "members": [
         {
             "name" : "brianne",
-            "personalSite" : "https://raw.githubusercontent.com/briannededeugd/web-app-from-scratch-2324/main/docs/data/data.json",
-            "personalPage": "https://raw.githubusercontent.com/briannededeugd/web-app-from-scratch-2324/main/data.json"
+            "personalSite" : "https://briannededeugd.github.io/web-app-from-scratch-2324/",
+            "personalPage": "https://raw.githubusercontent.com/briannededeugd/web-app-from-scratch-2324/main/docs/info.json"
         },
         {
             "name" : "elaine",

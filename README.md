@@ -1,5 +1,7 @@
 # TEAM APP - BRIANNE, ELAINE AND ROSE
 
+  <img src="./docs/readme-img/sitescreen.png" alt="The site of Elaine, Rose and Brianne displaying a pixel-style biography of a character" width="800px">
+
 Welcome to the team app for the course Webapps From Scratch of the minor Web Design & Development. As a team, we have a shared love for videogames - from the classic Nintendogs and Super Mario Bros to puzzle games like Sudoku and Nonograms. It was kind of a given that we'd channel this shared love into a team application that introduced who we are as retro video game characters.
 
 **Table of contents:**
